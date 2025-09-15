@@ -1,1 +1,18 @@
+# 🧪 Comandos utilizados para conectar à instância EC2 via SSH no Windows
+
+# 1. Verificar se o SSH está instalado
+ssh
+
+# 2. Conectar usando caminho completo da chave (.pem) com espaços no diretório
+ssh -i "G:/Meu Drive/Documentos Recentes/Captures/Bootcamp - AWS Practitioner/key-desafio-dio.pem" ubuntu@ec2-18-116-61-89.us-east-2.compute.amazonaws.com
+
+# 3. (Alternativa) Mover a chave para uma pasta mais simples e ajustar permissões
+icacls "C:\AWS\keys\key-desafio-dio.pem" /inheritance:r
+icacls "C:\AWS\keys\key-desafio-dio.pem" /grant:r "$($env:USERNAME):R"
+
+# 4. Conectar usando o novo caminho da chave
+ssh -i "C:/AWS/keys/key-desafio-dio.pem" ubuntu@ec2-18-116-61-89.us-east-2.compute.amazonaws.com
+
+# 5. Aceitar a conexão na primeira tentativa
+yes
 
