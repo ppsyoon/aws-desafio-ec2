@@ -45,6 +45,24 @@ Este repositório documenta minha prática no laboratório da DIO sobre EC2, AMI
 └── /scripts
     └── comandos-utilizados.txt
 ```
+---
+
+## ⚙️ Como funciona
+
+Este projeto simula o ciclo completo de uma instância EC2 na AWS, desde a criação até a geração de uma AMI personalizada. Abaixo, o diagrama simplificado representa o fluxo de ações:
+
+![Diagrama Simplificado EC2](images/diagrama-simplificado.png)
+
+### 🔍 Etapas explicadas:
+
+- **Usuário (Você):** Inicia o processo via terminal
+- **PowerShell / Terminal:** Interface para enviar comandos
+- **Chave SSH (.pem):** Autenticação segura para acesso à instância
+- **Ambiente EC2:** Instância com Apache e Git instalados
+- **Snapshot EBS:** Backup do volume principal
+- **AMI personalizada:** Imagem reutilizável da instância configurada
+
+---
 
 ---
 
